@@ -1,0 +1,18 @@
+<!-- <h1>Posts Component</h1>
+<ul>
+  <li *ngFor="let post of postData">
+    <p>{{post.id}}</p>
+    <strong>{{ post.title }}</strong>
+    <p>{{ post.body }}</p>
+    <button type="submit" (click)="deletePosts(post)">Delete</button>
+  </li>
+</ul>
+<button type="submit" (click)="getPosts()">Get</button> -->
+
+<div *ngFor="let post of postData" class="post">
+<app-post [childData]="post" (delete)="deletePosts(post)"></app-post>
+</div>
+
+
+
+ 
